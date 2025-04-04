@@ -33,6 +33,7 @@ COPY ./requirements.txt /myapp/requirements.txt
 RUN pip install --upgrade pip \
     && pip install -r requirements.txt
 
+RUN pip install python-jose>=3.4.0 gunicorn>=23.0.0 python-multipart>=0.0.18 starlette>=0.40.0
 # Copy the rest of your application's code
 COPY . /myapp
 # Copy the startup script and make it executable
